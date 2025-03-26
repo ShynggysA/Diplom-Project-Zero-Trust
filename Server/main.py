@@ -10,10 +10,8 @@ from Server.schemas import DeviceData
 app = FastAPI()
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-# Инициализация базы при запуске
 init_db.init_db()
 
-# Подключаем шаблоны и статику
 templates = Jinja2Templates(directory="templates")
 
 app.add_middleware(
